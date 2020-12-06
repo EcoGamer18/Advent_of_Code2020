@@ -65,4 +65,3 @@ def main_day_5():
     print(resolve2(lista))
     end = time.time()
     print("Second task took",end-start,"seconds.")
-
