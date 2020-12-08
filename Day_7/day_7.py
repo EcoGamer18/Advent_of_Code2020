@@ -44,22 +44,72 @@ def read_file():
                 else:
                     i[0] = int(i[0])
             x.extend(aux)
-    return lista"""
+    return lista
+"""
+
+import simple_colors
+
+
+def find_bags_1(bag, lista):
+    return [
+        [j[0], i[0]]
+        for i in lista
+        for j in i[1:]
+        if len(bag.intersection(j[1])) == 2
+    ]
+
+
+def find_bags_2(bag, lista):
+    for i in lista:
+        if len(bag.intersection(i[0])) == 2:
+            return lista.index(i)
+
+
+# 41559
+def resolve2(lista, setb={"shiny", "gold"}, tabs="\t"):
+    color = find_bags_2(setb, lista)
+    prod = 0
+    print(str(lista[color][0]))
+    for i in lista[color][1:]:
+        if i[0] != 0:
+            print(tabs + str(i[0]) + " ", end="")
+            x=resolve2(lista, i[1], tabs + "\t")
+            prod += i[0] * (x+1 if x!=1 else 1)
+    return prod if prod != 0 else 1
+
+
+def resolve1(lista):
+    queue = find_bags_1({"shiny", "gold"}, lista)
+    for i in queue:
+        queue.extend([i for i in find_bags_1(i[1], lista) if i[1] not in [x[1] for x in queue]])
+    return len(queue)
 
 
 def read_file():
-    with open("date_day_7.txt","r") as fp:
-        lista = [x.split(" bags contain ")[0].split(", ")
-                for x in fp.read().split(".\n")
+    with open("date_day_7.txt", "r") as fp:
+        lista = [x.split(" bags contain ")
+                 for x in fp.read().split(".\n")
+                 ]
+        for i in lista:
+            i[0] = set(i[0].split(" "))
+            i[1] = [
+                [
+                    int(x.split(" ")[0] if x.split(" ")[0] != "no" else 0), set(x.split(" ")[1:-1])
+                ]
+                for x in i[1].split(", ")
             ]
-    return lista[:-1]
+            i[1:len(i[1]) + 1] = i[1]
+    return lista
 
 
 def main_day_7():
     lista = read_file()
-    for i in lista:
-        print(i)
-    #print(resolve1(lista))
+    """for i in lista:
+        print(i)"""
+    print("First puzzle:")
+    print(resolve1(lista))
+    print("Second puzzle:")
+    print(resolve2(lista))
 
 
 main_day_7()
