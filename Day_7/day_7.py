@@ -55,7 +55,9 @@ https://www.geeksforgeeks.org/python-product-of-elements-using-index-list/
 https://www.geeksforgeeks.org/queue-in-python/
 https://www.geeksforgeeks.org/union-function-python/
 https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
-
+https://stackoverflow.com/questions/37372603/how-to-remove-specific-substrings-from-a-set-of-strings-in-python
+https://stackoverflow.com/questions/18551458/how-to-frame-two-for-loops-in-list-comprehension-python
+https://medium.com/better-programming/a-visual-guide-to-set-comparisons-in-python-6ab7edb9ec41
 """
 
 def find_bags_1(bag, lista):
