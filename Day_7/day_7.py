@@ -48,7 +48,15 @@ def read_file():
 """
 
 import simple_colors
+"""Useful links:
+https://careerkarma.com/blog/python-print-without-new-line/
+https://stackoverflow.com/questions/46878699/all-prints-in-function-with-tabs-python
+https://www.geeksforgeeks.org/python-product-of-elements-using-index-list/
+https://www.geeksforgeeks.org/queue-in-python/
+https://www.geeksforgeeks.org/union-function-python/
+https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
 
+"""
 
 def find_bags_1(bag, lista):
     return [
