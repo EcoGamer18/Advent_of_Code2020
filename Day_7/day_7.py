@@ -94,7 +94,7 @@ def resolve1(lista):
 
 
 def read_file():
-    with open("date_day_7.txt", "r") as fp:
+    with open("Day_7\\date_day_7.txt", "r") as fp:
         lista = [x.split(" bags contain ")
                  for x in fp.read().split(".\n")
                  ]
@@ -118,6 +118,3 @@ def main_day_7():
     print(resolve1(lista))
     print("Second puzzle:")
     print(resolve2(lista))
-
-
-main_day_7()

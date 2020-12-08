@@ -31,7 +31,7 @@ def resolve1(lista):
     return accumulator,0
 
 def read_list():
-    with open("date_day_8.txt") as fp:
+    with open("Day_8\\date_day_8.txt") as fp:
         lista=[i.split(" ") for i in fp.read().splitlines()]
         for i in lista:
             i[1]=int(i[1])
@@ -42,7 +42,7 @@ def main_day_8():
     lista=read_list()
     """for i in lista:
         print(i)"""
-    print(resolve1(lista))
+    print("First puzzle:")
+    print(resolve1(lista)[0])
+    print("Second puzzle:")
     print(resolve2(lista))
-
-main_day_8()
