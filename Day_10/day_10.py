@@ -83,12 +83,12 @@ def main_day_10():
     lista = read_file()
     """for i in lista:
         print(i)"""
-    print(resolve1(lista))
+    print(f"First puzzle: {resolve1(lista)}")
     listaa=[0]
     listaa.extend(lista)
     listaa.append(lista[-1]+3)
-    print(max(len(i) for i in modif_lista_for_2(listaa)))
-    print(resolve2(modif_lista_for_2(listaa)))
+    #print(max(len(i) for i in modif_lista_for_2(listaa)))
+    print(f"Second puzzle: {resolve2(modif_lista_for_2(listaa))}")
 
 
 main_day_10()
