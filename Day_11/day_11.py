@@ -3,7 +3,13 @@ from itertools import starmap, product
 import sys
 
 sys.setrecursionlimit(5000)
-
+"""Useful links:
+https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+https://stackoverflow.com/questions/3271931/set-products-in-python
+https://stackoverflow.com/questions/10851246/python-comparing-two-matrices
+https://www.geeksforgeeks.org/python-itertools-starmap/
+https://medium.com/better-programming/exploring-map-vs-starmap-in-python-6bcf32f5fa4a
+"""
 
 def empty1(x, y, lista):
     cells = [lista[i[0]][i[1]]
@@ -41,7 +47,7 @@ def rules1(lista):
             elif lista[i][j] == "#":
                 if occupied1(i, j, lista) is True:
                     listaa[i][j] = "L"
-    print("reguli aplicate")
+    #print("reguli aplicate")
     if matrici_egale(listaa, lista) is False:
         return rules1(listaa)
     else:
@@ -98,7 +104,7 @@ def rules2(lista):
             elif lista[i][j] == "#":
                 if occupied2(i, j, lista) is True:
                     listaa[i][j] = "L"
-    print("reguli aplicate")
+    #print("reguli aplicate")
     if matrici_egale(listaa, lista) is False:
         return rules2(listaa)
     else:
@@ -112,7 +118,8 @@ def read_file():
 
 def main_day_11():
     lista = read_file()
-    print(rules2(lista))
+    print(f"First puzzle: {rules1(lista)}")
+    print(f"Second puzzle: {rules2(lista)}")
 
 
 main_day_11()
