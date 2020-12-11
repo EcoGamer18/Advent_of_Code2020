@@ -3,6 +3,8 @@ Diferentele sunt doar de 1 si 3.
 Deci daca avem diferenta dintre 2 elem. egala cu 3, nu putem sa le aranja in vreun mod,dar
 un sir de elemente cu diferenta de 1 poate avea mai multe moduri de aranjamente.
 
+https://planetcalc.com/978/
+
 # secventa de dif 1 de 2 elemente => 1 singur mod
 (1,2)
 # secventa de dif 1 de 3 elemente => 2 moduri
