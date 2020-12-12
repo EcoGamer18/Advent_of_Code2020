@@ -13,7 +13,8 @@ def console():
     print("Put 0 to close.")
     while True:
         dict={"1":main_day_1,"2":main_day_2,"3":main_day_3,"4":main_day_4,
-              "5":main_day_5,"6":main_day_6,"7":main_day_7,"8":main_day_8,"9":main_day_9}
+              "5":main_day_5,"6":main_day_6,"7":main_day_7,"8":main_day_8,
+              "9":main_day_9}
         option=input("Choose day:")
         if option in dict.keys():
             dict[option]()
