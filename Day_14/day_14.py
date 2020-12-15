@@ -98,8 +98,8 @@ def main_day_14():
     lista = read_file()
     """for i in lista:
         print(i)"""
-    # print(f"First puzzle: {resolve1(lista)}")
-    print(resolve2(lista))
+    print(f"First puzzle: {resolve1(lista)}")
+    print(f"Second puzzle: {resolve2(lista)}")
 
 
 main_day_14()
